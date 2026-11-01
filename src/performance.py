@@ -21,7 +21,7 @@ from src.dijkstra import dijkstra
 from src.tsp import delivery_route
 
 
-OUTPUT_DIR = "results"
+OUTPUT_DIR = "images"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
