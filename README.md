@@ -25,7 +25,7 @@ Mini-Courier-Planner/
 │   ├── dijkstra.py               # Graph loading, Dijkstra, graph visualization
 │   ├── tsp.py                    # Nearest-Neighbour route approximation
 │   └── performance.py            # Reproducible runtime benchmarks
-├── data/
+├── datasets/
 │   ├── parcels.csv               # Sample parcel dataset
 │   └── roads.csv                 # Weighted undirected road dataset
 ├── images/
@@ -119,7 +119,7 @@ Let `n` be the number of parcels, `W` the integer vehicle capacity, `V` the numb
 
 The DP table uses `O(nW)` space. Merge Sort uses `O(n)` auxiliary space. Dijkstra uses `O(V + E)` graph/auxiliary storage. The route output itself may contain repeated intermediate road vertices.
 
-See [DESIGN.md](DESIGN.md) for the system workflow and [REPORT.md](REPORT.md) for methodology, results, limitations, and future scope.
+
 
 ## Assumptions and limitations
 
