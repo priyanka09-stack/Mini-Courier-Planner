@@ -1,5 +1,4 @@
-
-# 2. Merge Sort: Sort parcels by priority and deadline
+#Merge Sort: Sort parcels by priority and deadline
 def sort_parcels(parcels):
     def key(p):
         return (

@@ -24,15 +24,19 @@ Mini-Courier-Planner/
 │   ├── knapsack.py               # 0/1 Knapsack DP
 │   ├── dijkstra.py               # Graph loading, Dijkstra, graph visualization
 │   ├── tsp.py                    # Nearest-Neighbour route approximation
-│   └── performance.py            # Reproducible runtime benchmarks
+│   └── performance.py          # Reproducible 
+    |__ analysis.py
 ├── datasets/
 │   ├── parcels.csv               # Sample parcel dataset
 │   └── roads.csv                 # Weighted undirected road dataset
 ├── images/
 │   └── road_graph.png
-│   ├── runtime_results.csv
-│   └── runtime_comparison.png
-report and analysis
+│   ├── route_map.png
+│   ├──  runtime_comparison.png
+│   ├── runtime_large.csv
+│   ├── runtime_large.png
+│   └──runtime_results.csv 
+│ 
 ├── requirements.txt
 └── .gitignore
 ```

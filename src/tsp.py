@@ -1,7 +1,5 @@
 from src.dijkstra import dijkstra, get_path
-
-
-# 3. Nearest Neighbour TSP approximation
+#Nearest Neighbour TSP approximation
 def delivery_route(graph, depot, destinations):
     if depot not in graph:
         raise ValueError(f"Unknown depot: {depot}")
