@@ -24,19 +24,23 @@ Mini-Courier-Planner/
 │   ├── knapsack.py               # 0/1 Knapsack DP
 │   ├── dijkstra.py               # Graph loading, Dijkstra, graph visualization
 │   ├── tsp.py                    # Nearest-Neighbour route approximation
-│   └── performance.py          # Reproducible 
-    |__ analysis.py
+│   ├── performance.py            # Runtime benchmark (input sizes 10-100)
+│   └── analysis.py               # Correctness tests, algorithm comparisons, large benchmark, route image
 ├── datasets/
 │   ├── parcels.csv               # Sample parcel dataset
 │   └── roads.csv                 # Weighted undirected road dataset
 ├── images/
-│   └── road_graph.png
+│   ├── road_graph.png
 │   ├── route_map.png
-│   ├──  runtime_comparison.png
-│   ├── runtime_large.csv
+│   ├── runtime_comparison.png
+│   ├── runtime_results.csv
 │   ├── runtime_large.png
-│   └──runtime_results.csv 
-│ 
+│   ├── runtime_large.csv
+│   └── screenshots/              # Notebook output screenshots
+│       ├── 2_packing_plan_and_sorted_parcels.png
+│       ├── 2_dp_table_and_result.png
+│       ├── final_route.png
+│       └── tests_and_comparisons.png
 ├── requirements.txt
 └── .gitignore
 ```
@@ -96,17 +100,27 @@ This benchmarks input sizes 10, 25, 50, and 100. It writes:
 
 Runtime values vary by hardware, Python version, and system load. Re-run the benchmark on the machine used for the final demonstration if updated measurements are required.
 
+### Option 3: Run tests, comparisons and the large benchmark
+```bash
+python -m src.analysis
+```
+This runs four correctness checks (Merge Sort vs sorted(), Knapsack vs brute force, Dijkstra vs Floyd-Warshall, route length) compares the chosen algorithms with alternatives (Bubble Sort, greedy knapsack, brute-force TSP), benchmarks input sizes 100, 200, 500 and 1000 and draws the final route. It writes:
+
+- `images/runtime_large.csv`
+- `images/runtime_large.png`
+- `images/route_map.png`
+
 ## Sample result
 
-With the supplied sample data and vehicle capacity of **15 kg**, the notebook selects five parcels:
+With the supplied sample data and vehicle capacity of 15 kg, the notebook selects five parcels:
 
 `P03, P01, P09, P08, P05`
 
-- Packed weight: **15 kg**
-- Total parcel value: **325**
+- Packed weight: 15 kg
+- Total parcel value: 325
 - Selected delivery locations: A, B, C
-- Approximate delivery tour: **D0 → C → A → B → D0**
-- Route distance: **18 km**
+- Approximate delivery tour: D0 → C → A → B → D0
+- Route distance: 18 km
 
 The route is an approximation produced by Nearest Neighbour; it is not guaranteed to be the globally shortest TSP tour.
 
